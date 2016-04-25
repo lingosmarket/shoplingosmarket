@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<!--
+
+	Leela Theme Documentation
+	By Potok Proyektov
+	Released March 2014
+	Revised March 26, 2014
+
+	Credits
+	Aleks Dorohovich • Design, Coding
+	Ivan Kozlov • Design, Coding
+
+-->
+
+<!--[if IE 9]><html class="ie9" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Leela – Documentation</title>
+
+		<meta name="description" content="" />
+	
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,100italic,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="README_assets/stylesheets/font-awesome.min.css" />
+		<link rel="stylesheet" href="README_assets/stylesheets/app.css" />
+		<link rel="stylesheet" href="README_assets/stylesheets/component.min.css" />
+		<link rel="stylesheet" href="README_assets/stylesheets/tomorrow.css" />
+		<link rel="stylesheet" href="README_assets/stylesheets/theme.css" />	
+
+		<!-- JavaScript -->
+		<script src="README_assets/js/modernizr.min.js"></script>
+	</head>
+	<body>
+
+		<div class="section section-collapse headroom pinned">
+			<nav class="top-bar">
+	  			<ul class="title-area">
+			    	<li class="name">
+			      		<div class="name-logo"><a href="#">Leela Theme – Documentation v. 1.0</a></div>
+			    	</li>
+			  	</ul>
+			</nav>
+		</div>
+
+		<div class="large-12 columns">
+			
+			<div class="row top"></div>
+			<div class="row text-center">
+				<div class="section-description">
+					<p><small>Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="https://creativemarket.com/doctyper">here</a>. Thanks so much!</small></p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="large-12 columns">
+
+			<div class="row text-center">
+				<h4>Table of Contents</h4>
+			</div>
+
+		</div>
+
+		<div data-magellan-expedition="fixed">
+		  	<dl class="sub-nav">
+		    	<dd data-magellan-arrival="folder"><a href="#folder">A. Folder Structure</a></dd>
+		    	<dd data-magellan-arrival="html"><a href="#html">B. HTML Structure</a></dd>
+		    	<dd data-magellan-arrival="css"><a href="#css">C. CSS Files and Structure</a></dd>
+		    	<dd data-magellan-arrival="js"><a href="#js">D. JavaScript</a></dd>
+		    	<dd data-magellan-arrival="php"><a href="#php">E. PHP Contact Form</a></dd>
+		    	<dd data-magellan-arrival="feature"><a href="#feature">F. Theme features</a></dd>
+		    	<dd data-magellan-arrival="credits"><a href="#credits">G. Sources and Credits</a></dd>
+		  	</dl>
+		</div>
+
+		<a name="folder"></a>
+		<div class="large-12 columns section-content">
+
+			<div class="row text-center">
+				<h4 data-magellan-destination="folder">A. Folder Structure</h4>
+			</div>
+			<div class="row">
+				<h5 class="text-center">Main structure</h5>
+				<p>
+					<pre>
+			/leela-html <span class="small-comment-line"> Root folder</span>
+			    
+			    /documentation <span class="small-comment-line"> Documentation</span>
+
+			    /lib <span class="small-comment-line">           SCSS files, some uncompressed css, js files and libraries. 
+			                    For development purpose only.</span>
+			    
+			    /template <span class="small-comment-line">      Main template folder. 
+			                    For production use these files only.</span>
+					</pre>
+				</p>
+				<h5 class="text-center">Template structure</h5>
+				<p>
+					<pre>
+			/template
+
+			    /fonts
+			    
+			    /images
+			    	/google-maps <span class="small-comment-line">        Pin image for Google Maps address location</span>
+			    	/icons-overview <span class="small-comment-line">     Icons for overview section</span>
+			    	/logo <span class="small-comment-line">               Logo</span>
+			    	/logo-clients <span class="small-comment-line">       Logos for clients section</span>
+			    	/orbit-slider <span class="small-comment-line">       Images for slider</span>
+			    	/team <span class="small-comment-line">               Photos of team members</span>
+			    	/with-photo-section <span class="small-comment-line"> Backgrounds for sections</span>
+			    	/work-grid <span class="small-comment-line">          Images for portfolio grid</span>
+			    	/work-one <span class="small-comment-line">           Images for project section</span>
+
+			    index.html <span class="small-comment-line">    HTML theme file</span>
+
+			    /js
+			    	<span class="small-comment-dots">..</span>
+			    	app.js <span class="small-comment-line">    Check this file if you need to customize Google Maps</span>
+			    	<span class="small-comment-dots">..</span>
+
+			    /php <span class="small-comment-line">          PHP Contact form</span>
+
+			    /stylesheets
+			    	<span class="small-comment-dots">..</span>
+			    	theme.css <span class="small-comment-line"> Theme stylesheet. If you want to make some changes, please edit this file.</span>
+			    	<span class="small-comment-dots">..</span>
+					</pre>
+				</p>
+			</div>
+
+		</div>
+
+		<a name="html"></a>
+		<div class="large-12 columns section-content">
+
+			<div class="row text-center">
+				<h4 data-magellan-destination="html">B. HTML Structure</h4>
+			</div>
+			<div class="row">
+				<p>&ldquo;Leela&rdquo; html template built on Zurb Foundation 5 framework for easy editing. Please <a href="http://foundation.zurb.com/docs/">check additional documentation</a> on Zurb Foundation website.</p>
+				<p>This theme is a responsive layout. Default template has 12 sections:</p>
+				<ol>
+					<li>Navigation</li>
+					<li>Header</li>
+					<li>Overview</li>
+					<li>Our Team</li>
+					<li>Portfolio</li>
+					<li>Project <small class="small">(hidden section by default, but opens when user click on one of potfolio item)</small></li>
+					<li>Testimonials</li>
+					<li>One More <small class="small">(this section is used for example purpose)</small></li>
+					<li>Clients</li>
+					<li>Contact</li>
+					<li>Map</li>
+					<li>Footer</li>
+				</ol>
+				<p>Here is the general structure for each block.</p>
+				<h5>Navigation</h5>
+				<pre><code class="xml">
+<!-- Navigation -->
+<div class="section section-collapse" id="navigation">
+
+  <nav class="top-bar" id="top-bar" data-topbar="">
+    <ul class="title-area">
+      <li class="name">
+        <div class="name-logo"><a href="#">Title</a></div><!-- title or company name -->
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="#"><i class="fa fa-bars"></i></a><!-- menu for mobile and small displays -->
+      </li>
+    </ul>
+
+
+    <section class="top-bar-section" id="menu"><!-- menu -->
+      <ul>
+        <li><a href="#header">Home</a></li><!-- href="#header" point to section id on the page -->
+        <li><a href="#overview" class="">...</a></li>
+      </ul>
+    </section>
+  </nav>
+
+</div>
+<!-- .Navigation -->
+				</code></pre>
+				<h5>&ldquo;Always Top&rdquo; Navigation <small class="small"><kbd>.always-top</kbd></small></h5>
+				<pre><code class="xml">
+<!-- Navigation -->
+<div class="section section-collapse always-top" id="navigation"><!-- add .always-top class to the section for this type menu -->
+
+  <nav class="top-bar" id="top-bar" data-topbar="">
+    <ul class="title-area">
+      ...
+    </ul>
+
+
+    <section class="top-bar-section" id="menu">
+      ...
+    </section>
+  </nav>
+
+</div>
+<!-- .Navigation -->
+				</code></pre>
+				<p><img src="README_assets/snaps/snap9.png" alt="" /></p>
+				<h5>Header</h5>
+				<pre><code class="xml">
+<!-- Header -->
+<div class="section bg-light-rose" id="header">
+
+  <div class="row">
+    <div class="large-12 columns text-center">
+      <div class="hero-header">
+        <div class="hero-logo">
+          <img src="images/logo/here-goes-logo.png" alt=""><!-- place for logo -->
+        </div>
+        <div class="hero-headline">
+	      <h1>Title</h1><!-- title or company name -->
+	      <p>Second title</p><!-- sub headline -->
+        </div>
+        <div class="hero-scroll">
+          <a href="#overview" id="scroll"><i class="fa fa-chevron-down"></i></a><!-- scroll to overview section -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- .Header -->
+				</code></pre>
+				<h5>Section</h5>
+				<pre><code class="xml">
+<!-- Section Name -->
+<div class="section" id="section-id">
+
+  <div class="row"><!-- row -->
+    <div class="large-12 columns"><!-- columns -->
+      <!-- content -->
+    </div>
+  </div>
+
+</div>
+<!-- .Section Name -->
+				</code></pre>
+				<p>Each section has different options.</p>
+				<h5>Section with white background <small class="small">(same as above, this section color goes by default)</small></h5>
+				<pre><code class="xml">
+<!-- Section Name -->
+<div class="section" id="section-id">
+
+  <div class="row">
+    <div class="large-12 columns">
+
+    </div>
+  </div>
+
+</div>
+<!-- .Section Name -->
+				</code></pre>
+				<p><img src="README_assets/snaps/snap1.png" alt="" /></p>
+				<h5>Section with gray background <small class="small"><kbd>.bg-gray</kbd></small></h5>
+				<pre><code class="xml">
+<!-- Section Name -->
+<div class="section bg-gray" id="section-id"><!-- if you want use this color, you must add class .bg-gray to the section -->
+
+  <div class="row">
+    <div class="large-12 columns">
+
+    </div>
+  </div>
+
+</div>
+<!-- .Section Name -->
+				</code></pre>
+				<p><img src="README_assets/snaps/snap2.png" alt="" /></p>
+				<h5>Section with purple background <small class="small"><kbd>.bg-purple</kbd></small></h5>
+				<pre><code class="xml">
+<!-- Section Name -->
+<div class="section bg-purple" id="section-id"><!-- if you want use this color, you must add class .bg-purple to the section -->
+
+  <div class="row">
+    <div class="large-12 columns">
+
+    </div>
+  </div>
+
+</div>
+<!-- .Section Name -->
+				</code></pre>
+				<p><img src="README_assets/snaps/snap3.png" alt="" /></p>
+				<h5>Section with purple background and photo <small class="small"><kbd>.bg-purple</kbd> + <kbd>.with-photo</kbd></small></h5>
+				<pre><code class="xml">
+<!-- Section Name -->
+<div class="section bg-purple with-photo" id="section-id"><!-- if you want use this color, you must add classes .bg-purple and .with-photo to the section -->
+
+  <div class="row">
+    <div class="large-12 columns">
+
+    </div>
+  </div>
+
+</div>
+<!-- .Section Name -->
+				</code></pre>
+				<p><img src="README_assets/snaps/snap4.png" alt="" /></p>
+				<h5>Section with light rose background <small class="small"><kbd>.bg-light-rose</kbd></small></h5>
+				<pre><code class="xml">
+<!-- Section Name -->
+<div class="section bg-light-rose" id="section-id"><!-- if you want use this color, you must add class .bg-light-rose to the section -->
+
+  <div class="row">
+    <div class="large-12 columns">
+
+    </div>
+  </div>
+
+</div>
+<!-- .Section Name -->
+				</code></pre>
+				<p><img src="README_assets/snaps/snap5.png" alt="" /></p>
+				<h5>Section with light rose background and photo <small class="small"><kbd>.bg-light-rose</kbd> + <kbd>.with-photo</kbd></small></h5>
+				<pre><code class="xml">
+<!-- Section Name -->
+<div class="section bg-light-rose with-photo" id="section-id"><!-- if you want use this color, you must add classes .bg-light-rose and .with-photo to the section -->
+
+  <div class="row">
+    <div class="large-12 columns">
+
+    </div>
+  </div>
+
+</div>
+<!-- .Section Name -->
+				</code></pre>
+				<p><img src="README_assets/snaps/snap6.png" alt="" /></p>
+				<h5>Section with dark blue background <small class="small"><kbd>.bg-dark-blue</kbd></small></h5>
+				<pre><code class="xml">
+<!-- Section Name -->
+<div class="section bg-dark-blue" id="section-id"><!-- if you want use this color, you must add class .bg-dark-blue to the section -->
+
+  <div class="row">
+    <div class="large-12 columns">
+
+    </div>
+  </div>
+
+</div>
+<!-- .Section Name -->
+				</code></pre>
+				<p><img src="README_assets/snaps/snap7.png" alt="" /></p>
+				<h5>Section with dark blue background and photo <small class="small"><kbd>.bg-dark-blue</kbd> + <kbd>.with-photo</kbd></small></h5>
+				<pre><code class="xml">
+<!-- Section Name -->
+<div class="section bg-dark-blue with-photo" id="section-id"><!-- if you want use this color, you must add classes bg-dark-blue and .with-photo to the section -->
+
+  <div class="row">
+    <div class="large-12 columns">
+
+    </div>
+  </div>
+
+</div>
+<!-- .Section Name -->
+				</code></pre>
+				<p><img src="README_assets/snaps/snap8.png" alt="" /></p>
+				<p class="note">Please note, <kbd>.with-photo</kbd> class works with <kbd>.bg-purple</kbd>, <kbd>.bg-light-rose</kbd> and <kbd>.bg-dark-blue</kbd> only.</p>
+				<h5>Headings</h5>
+				<pre><code class="xml">
+<div class="section-title">
+  <h2>Main Section Title</h2>
+</div>
+<div class="section-description">
+  <h3>Additional Section Title</h3>
+  <p><small>Section description.</small></p>
+</div>
+				</code></pre>
+				<h5>Portfolio and Project Sections</h5>
+				<pre><code class="xml">
+<ul class="large-block-grid-3 medium-block-grid-3 small-block-grid-2 grid effect-3" id="grid">
+  <li>
+    <a href="#" class="project-item" data-project-id="project-1"><!-- data id for project 1 -->
+      <img src="images/work-grid/work_grid.png" alt="" />
+      <div class="project-tease text-center">
+        <div class="project-tease-content">
+          <h4>Project 1</h4>
+          <p>Project description.</p>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="#" class="project-item" data-project-id="project-2"><!-- data id for project 2 -->
+      <img src="images/work-grid/work_grid.png" alt="" />
+      <div class="project-tease text-center">
+        <div class="project-tease-content">
+          <h4>Project 2</h4>
+          <p>Project description.</p>
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
+				</code></pre>
+				<pre><code class="xml">
+<!-- Project 1 -->
+<div class="section project" id="project-1"><!-- project id, sames as tile for this project on portfolio grid -->
+
+  <div class="row">
+    <div class="large-12 columns text-center">
+      <div class="section-title">
+        <h2>Project Title</h2>
+      </div>
+      <div class="section-description">
+        <h3>Project Introduction</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      content – text, photos
+    </div>
+  </div>
+
+  <a href="#" class="project-close">
+    <i class="fa fa-times-circle-o"></i><!-- close project section -->
+  </a>
+
+</div>
+<!-- .Project 1 -->
+				</code></pre>
+				<h5>Contact Form</h5>
+				<pre><code class="xml">
+<form class="contact-form" id="contact-form" method="post" data-abide>
+  <div class="row">
+    <div class="large-12 columns">
+      <div>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Jane Law" required><!--  required field example -->
+        <small class="error">Name is required and must be a string.</small><!--  error message for required field -->
+      </div>
+      ..
+      <div>
+        <label>Message</label>
+        <textarea name="message" placeholder="Hi there!"></textarea><!--  regular field -->
+      </div>
+      <div class="clearfix">
+        <input type="submit" class="button right" value="Send">
+      </div>
+    </div>
+  </div>
+</form>
+				</code></pre>
+			</div>
+
+		</div>
+
+		<a name="css"></a>
+		<div class="large-12 columns section-content">
+
+			<div class="row text-center">
+				<h4 data-magellan-destination="css">C. CSS Files and Structure</h4>
+			</div>
+			<div class="row">
+				<p>I'm using <kbd>four</kbd> CSS files in this theme.</p>
+				<ul>
+					<li>font-awesome.css <small class="small">font awesome font and icons</small></li>
+					<li>app.css <small class="small">foundation 5</small></li>
+					<li>component.css <small class="small">effects and animation</small></li>
+					<li>theme.css <small class="small">theme stylesheet</small></li>
+				</ul>
+				<p>The <kbd>theme.css</kbd> contains all of the specific stylings for the page. The file is separated into sections using:</p>
+				<pre><code>
+/*** Sections ***/
+
+some code
+
+/*** Section Purple ***/
+
+some code
+
+/*** Section Dark Blue ***/
+
+some code
+
+/*** Section Light Rose ***/
+
+some code
+
+etc.
+
+				</code></pre>
+				<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p>
+			</div>
+
+		</div>
+
+		<a name="js"></a>
+		<div class="large-12 columns section-content">
+
+			<div class="row text-center">
+				<h4 data-magellan-destination="js">D. JavaScript</h4>
+			</div>
+			<div class="row">
+				<p>This template uses the following JavaScript files, located in the <kbd>js</kbd> folder.</p>
+				<ul>
+					<li>Foundation 5 javascript library</li>
+					<li>jQuery and some plugins:
+						<ul>
+							<li>jQuery Waypoints <small class="small">(this plugin makes it easy to execute a function whenever you scroll to an element)</small></li>
+							<li>animOnScroll <small class="small">(jQuery plugin that animates elements based on scrollbar position)</small></li>
+							<li>Masonry <small class="small">(for portfolio grid)</small></li>
+							<li>Headroom.js <small class="small">(for &ldquo;sticky&rdquo; navigation)</small></li>
+						</ul>
+					</li>
+					<li>Additional javascript libraries:
+						<ul>
+							<li>imagesloaded.js</li>
+							<li>classie.js</li>
+							<li>toucheffects.js</li>
+							<li>Google Maps API</li>
+						</ul>
+					</li>
+					<li>app.js <small class="small">(call and activate contains plugins, small functions)</small></li>
+				</ul>
+				<h5>How to edit Google Maps address location and change Google Maps theme</h5>
+				<p></p>
+				<p>1. Open <kbd>js/app.js</kbd> file</p>
+				<p>2. Scroll down and on line <kbd>165</kbd> you will see Google Maps theme options. On that place you can modify colors and visibilty for some layers.</p>
+				<pre><code>
+// Google Maps Theme
+
+var googlemaptheme = [
+  {
+    "featureType": "water",
+    "stylers": [
+      {
+        "visibility": "on"
+      },
+      {
+        "color": "#acbcc9"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape",
+    "stylers": [
+      {
+        "color": "#f2e5d4"
+      }
+    ]
+  }
+  ...
+];
+				</code></pre>
+				<p>3. On line <kbd>266</kbd> and <kbd>273</kbd> you will be able to set up coordinates and address location.</p>
+				<pre><code>
+// Google Maps Initialize
+
+function initialize() {
+  var mapOptions = {
+    zoom: 9,
+    center: new google.maps.LatLng(37.42265,-122.163417),
+    scrollwheel: false,
+    mapTypeControl: false,
+    styles: googlemaptheme
+  }
+
+  var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+  var myLatLng = new google.maps.LatLng(37.42265,-122.163417);
+  var image = 'images/google-maps/pin.png';
+
+  ..
+				</code></pre>
+			</div>
+
+		</div>
+
+		<a name="php"></a>
+		<div class="large-12 columns section-content">
+
+			<div class="row text-center">
+				<h4 data-magellan-destination="php">E. PHP Contact Form</h4>
+			</div>
+			<div class="row">
+				<p>How to set up PHP Contact Form.</p>
+				<p>1. Open file <kbd>php/form.php</kbd></p>
+				<p>2. On <kbd>line 22</kbd> paste your email address</p>
+				<pre><code>
+$email_to = "place@your.email"; // place your email here
+				</code></pre>
+				<p>That's it.</p>
+			</div>
+
+		</div>
+
+		<a name="feature"></a>
+		<div class="large-12 columns section-content">
+
+			<div class="row text-center">
+				<h4 data-magellan-destination="feature">F. Theme features</h4>
+			</div>
+			<div class="row">
+				<ul>
+					<li>Zurb Foundation 5 support</li>
+					<li>Responsive layout</li>
+					<li>Google Fonts support</li>
+					<li>Font Awesome icons</li>
+					<li>Different colors for sections
+						<ul>
+							<li>white</li>
+							<li>gray</li>
+							<li>purple</li>
+							<li>purple with photo</li>
+							<li>light rose</li>
+							<li>light rose with photo</li>
+							<li>dark blue</li>
+							<li>dark blue with photo background</li>
+						</ul>
+					</li>
+					<li>Expanding projects area</li>
+					<li>Image Slider via Orbit jQuery Plugin</li>
+					<li>Two types of navigation – headroom.js and with &ldquo;always top&rdquo; behavior</li>
+					<li>Google Maps theme support</li>
+					<li>Working AJAX contact form</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<a name="credits"></a>
+		<div class="large-12 columns section-content">
+
+			<div class="row text-center">
+				<h4 data-magellan-destination="credits">G. Sources and Credits</h4>
+			</div>
+			<div class="row">
+				<p>I've used the following html frameworks, fonts, javascript libraries and other files as listed.</p>
+				<ul>
+					<li>Foundation 5 by Zurb - <a href="http://foundation.zurb.com/">http://foundation.zurb.com/</a></li>
+					<li>Font Awesome by Dave Gandy - <a href="http://fontawesome.io">http://fontawesome.io</a></li>
+					<li>jQuery - <a href="http://jquery.com/">http://jquery.com/</a></li>
+					<li>jQuery Waypoints - <a href="http://imakewebthings.com/jquery-waypoints">http://imakewebthings.com/jquery-waypoints</a></li>
+					<li>Modernizr - <a href="http://modernizr.com/">http://modernizr.com/</a></li>
+					<li>Masonry - <a href="http://masonry.desandro.com/">http://masonry.desandro.com/</a></li>
+					<li>animOnScroll - <a href="https://github.com/derekck/animOnScroll">https://github.com/derekck/animOnScroll</a></li>
+					<li>Headroom.js - <a href="http://wicky.nillia.ms/headroom.js/">http://wicky.nillia.ms/headroom.js/</a></li>
+					<li>Animate.css - <a href="https://daneden.me/animate/">https://daneden.me/animate/</a></li>
+					<li>Roboto Font - <a href="http://www.google.com/fonts/specimen/Roboto">http://www.google.com/fonts/specimen/Roboto</a></li>
+				</ul>
+				<p>All photos on preview were used from <a href="http://unsplash.com/">Unsplash.com</a>. Those photos are not included in this template.</p>
+			</div>
+
+		</div>
+
+		<div class="large-12 columns section-content">
+
+			<div class="row text-center">
+				<h4>One More Thing</h4>
+			</div>
+			<div class="row">
+				<div class="section-description text-center">
+					<p><small>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist.</small></p>
+					<p><small>If you have a more general question relating to the themes on Creative Market, you might consider visiting the forums and asking your question in the &ldquo;Item Discussion&rdquo; section.</small></p>
+				</div>
+				<div class="section-description text-center">
+					<p>
+						<small>
+							Aleks Dorohovich<br />
+							<a href="mailto:alex@doctype.me">alex@doctype.me</a><br />
+							<a href="https://creativemarket.com/doctyper">Doctype</a> on Creative Market<br />
+						</small>
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="large-12 columns section-content">
+
+			<div class="row">
+				<div class="section-description text-center">
+					<p></p>
+				</div>
+				<div class="section-description text-right">
+					<p></p>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- JavaScript -->
+		<script src="README_assets/js/jquery.min.js"></script>
+		<script src="README_assets/js/foundation.min.js"></script>
+		<script src="README_assets/js/highlight.pack.js"></script>
+		<script>
+
+			$(document).ready(function() {
+	  			$('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+			});
+
+			$.fn.convertTag = function(text){
+			    this.text(text);
+			    this.html(this.html().replace(/&lt;div\s*\/&gt;/g,'<div>'));
+			    return this;
+			}
+			
+			$('.xml').each(function() {
+				var convert = $(this).html();
+				$(this).convertTag(convert);
+			});
+
+		</script>
+		<script src="README_assets/js/app.js"></script>
+		<!-- .JavaScript -->
+
+	</body>
+</html>
